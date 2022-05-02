@@ -1,0 +1,19 @@
+
+from flask import render_template
+from . import main
+from ..request import get_news,get_source
+
+
+#views
+@main.route('/')
+def source():
+    news_source = get_source()
+    title = 'HotTeaNews'
+    return render_template('source.html',sources = news_source, title = title)
+
+@main.route('/articles')
+def articles():
+    news = get_news()
+    title = 'HotTeaNews'
+
+    return render_template('news.html',articles = news ,title = title)

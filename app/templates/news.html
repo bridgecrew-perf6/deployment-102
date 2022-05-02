@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+{% endblock %}
+
+{% block content %} <br>
+<!-- <h2 class="text-center">NEWS UPDATES</h2> -->
+<div class="container">
+    <h2 class=" text-center">Get updated with the latest news articles</h2><br>
+    <ul>
+        {% for article in articles %}
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <img src="{{article.urlToImage}}" class="card-img-top"><br>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="card-text">{{article.title}}</h2>
+                        <p>{{article.description}}</p>
+                        <p>{{article.content}}</p>
+                        <p>{{article.publishedAt}}</p>
+                        <a href="{{article.url}}">See More articles from source</a>
+
+                    </div>
+                </div>
+            </div>
+        <br>
+        <hr>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}

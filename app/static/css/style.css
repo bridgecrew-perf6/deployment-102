@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Tapestry&display=swap');
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Playfair Display', serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* overflow: hidden; */
+    color: white;
+}
+
+body{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.555)), url("./newspaper-2253408__340.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    height: 100vh 
+}
+
+.navbar{
+    background-color: transparent;
+
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+.link-nav-main{
+    font-family: 'Tapestry', cursive;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #32beff;
+}
+marquee{
+    /* font-family: 'Tapestry', cursive;  */
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: rgb(25, 133, 133);
+    
+}
+
+.link-nav-main:hover{
+    color: #EEEEEE;
+}
+
+.link-nav{
+    color: white;
+    font-weight: 500;
+}
+
+.navbar-toggle{
+    background-color: #32c5ff;
+}
+hr{
+    border: .1rem solid rgb(0, 183, 255);
+}
+img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}

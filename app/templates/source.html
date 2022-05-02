@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <!-- <div class="row"> -->
+        <!-- <h1 class="tag">Welcome to Quick Updates your trusted news source</h1> -->
+    <!-- </div> -->
+    <!-- <marquee behavior="scroll" direction="left">FIND NEWS SOURCES</marquee> -->
+    <ul>
+        <marquee behavior="scroll" direction="left"><h1 class="tag">Quick Updates your trusted news source</h1></marquee> 
+
+        {% for source in sources%}
+        <div class="card">
+            <div class="card-body">
+                <!-- <div class="col"> -->
+                    <h1>{{source.name}}</h1>
+                    <h3>{{source.description}}</h3>
+                    <h3>Language: {{source.language}}</h3>
+                    <h3>Country: {{source.country}}</h3>
+                    <p><a href="{{source.url}}">View Articles</a></p>
+                <!-- </div> -->
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
